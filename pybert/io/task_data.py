@@ -70,7 +70,9 @@ class TaskData(object):
             if is_train:
                 target = row[2:]
             else:
-                target = [-1,-1,-1,-1,-1,-1]
+                #change 
+                # target = [-1,-1,-1,-1,-1,-1]
+                target = [-1]
             sentence = str(row[1])
             if preprocessor:
                 sentence = preprocessor(sentence)
