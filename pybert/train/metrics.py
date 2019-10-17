@@ -292,7 +292,7 @@ class MultiLabelReport(Metric):
         '''
         计算指标得分
         '''
-        for i, label in self.id2label.items():
+        for i, label in self.id2label.items()[:5]:
             auc = roc_auc_score(y_score=self.y_prob[:, i], y_true=self.y_true[:, i])
             print(f"label:{label} - auc: {auc:.4f}")
 
