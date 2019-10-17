@@ -14,7 +14,7 @@ from pybert.preprocessing.preprocessor import EnglishPreProcessor
 from pybert.callback.modelcheckpoint import ModelCheckpoint
 from pybert.callback.trainingmonitor import TrainingMonitor
 from pybert.train.metrics import AUC, AccuracyThresh, MultiLabelReport
-from pytorch_transformers import AdamW, WarmupLinearSchedule
+from transformers import AdamW, WarmupLinearSchedule
 from torch.utils.data import RandomSampler, SequentialSampler
 
 warnings.filterwarnings("ignore")

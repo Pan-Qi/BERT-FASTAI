@@ -115,7 +115,23 @@ class Trainer(object):
             self.model.train()
             batch = tuple(t.to(self.device) for t in batch)
             input_ids, input_mask, segment_ids, label_ids = batch
+            # print(input_ids.shape)
+            # print(input_ids)
+            # print(input_mask.shape)
+            # print(input_mask)
+            # print(segment_ids.shape)
+            # print(segment_ids)
+            # print(label_ids.shape)
+            # print(label_ids)
+
             logits = self.model(input_ids, segment_ids,input_mask)
+
+            # print(logits)
+            # print(type(logits))
+            logits = logits[:,0:5]
+            # print(logits)
+            # print(logits.shape)
+            
             loss = self.criterion(output=logits,target=label_ids)
             if len(self.n_gpu) >= 2:
                 loss = loss.mean()

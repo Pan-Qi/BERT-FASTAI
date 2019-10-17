@@ -1,3 +1,20 @@
+pybert/pretrain/bert/base-uncased/pytorch_model.bin
+pybert/pretrain/bert/base-uncased/config.json
+pybert/pretrain/bert/base-uncased/bert_vocab.txt
+
+
+pybert/dataset/cached_train_examples_bert
+pybert/dataset/cached_train_features_256_bert
+pybert/dataset/cached_valid_examples_bert
+pybert/dataset/cached_valid_features_256_bert
+pybert/dataset/kaggle.train.pkl
+pybert/dataset/kaggle.valid.pkl
+pybert/dataset/test.csv
+pybert/dataset/test_labels.csv
+pybert/dataset/train.csv
+pybert/dataset/Untitled.ipynb
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
