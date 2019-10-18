@@ -16,6 +16,8 @@ from pybert.callback.trainingmonitor import TrainingMonitor
 from pybert.train.metrics import AUC, AccuracyThresh, MultiLabelReport
 from pytorch_transformers import AdamW, WarmupLinearSchedule
 from torch.utils.data import RandomSampler, SequentialSampler
+import numpy as np
+import pandas as pd
 
 warnings.filterwarnings("ignore")
 
@@ -162,7 +164,13 @@ def run_test(args):
                           n_gpu=args.n_gpu)
 
     result = predictor.predict(data=test_dataloader)
-    print(result)
+
+    prob_matrix = pd.DataFrame(result)
+    prob_matrix.to_csv('matrix.csv')
+    result = np.argmax(result,axis=1) + 1
+    result = pd.DataFrame(result)
+    result.to_csv('result.csv')
+    # print(result)
 
 def main():
     parser = ArgumentParser()
