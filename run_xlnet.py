@@ -137,7 +137,7 @@ def run_test(args):
     targets, sentences = data.read_data(raw_data_path=config['test_path'],
                                         preprocessor=EnglishPreProcessor(),
                                         is_train=True)
-    lines = zip(sentences, targets)
+    lines = list(zip(sentences, targets))
     processor = XlnetProcessor(vocab_path=config['xlnet_vocab_path'], do_lower_case=args.do_lower_case)
     label_list = processor.get_labels()
     id2label = {i: label for i, label in enumerate(label_list)}

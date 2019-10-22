@@ -42,10 +42,13 @@ class TaskData(object):
             N = len(data)
             test_size = int(N * valid_size)
             if shuffle:
+                labeled = data[:49994]
                 random.seed(seed)
-                random.shuffle(data)
-            valid = data[:test_size]
-            train = data[test_size:]
+                random.shuffle(labeled)
+            valid = labeled[:2000]
+            train = labeled[2000:] + data[49994:]
+            # print(type(train))
+            # print(train)
             # 混洗train数据集
             if shuffle:
                 random.seed(seed)
@@ -55,6 +58,7 @@ class TaskData(object):
             valid_path = data_dir / f"{data_name}.valid.pkl"
             save_pickle(data=train,file_path=train_path)
             save_pickle(data = valid,file_path=valid_path)
+        
         return train, valid
 
     def read_data(self,raw_data_path,preprocessor = None,is_train=True):
