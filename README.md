@@ -108,4 +108,4 @@ Follow the jupyter notebook called fast ai, run the code one by one for training
 ## Ensambling
 Conbine the bert probability matrix.csv and fast ai perdiction probability with certain weight.
 Do argmax on the combined probability and plus one is the final label.
-In this repo we used weight 1.2 for the higher score probability matrix, 1.0 for lower score probability matrix. Also, for a single model, sun miltiple time and do average may also improve the accuracy.
+In this repo we used weight 1.2 for the higher score probability matrix, 1.0 for lower score probability matrix. Also, for a single model, run miltiple time and do average may also improve the accuracy.
