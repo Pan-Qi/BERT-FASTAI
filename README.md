@@ -106,5 +106,6 @@ Label: identity_hate - auc: 0.9927
 Follow the jupyter notebook called fast ai, run the code one by one for training the language model and classifier.
 
 ## Ensambling
-Conbine the bert probability matrix.csv and fast ai perdiction probability with certain weight.
-Do argmax on the combined probability and plus one is the final label.
+Conbine the bert probability matrix.csv and fast ai perdiction probability with certain weight.\n
+Do argmax on the combined probability and plus one is the final label. \n
+In this repo we used weight 1.2 for the higher score probability matrix, 1.0 for lower score probability matrix.
