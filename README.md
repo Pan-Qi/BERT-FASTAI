@@ -1,3 +1,7 @@
+
+This repo is the combination of FAST AI and BERT for 5 class semantic analysis classification task.
+First run 
+
 ## Bert multi-label text classification by PyTorch
 
 This repo contains a PyTorch implementation of the pretrained BERT and XLNET model for multi-label text classification.
